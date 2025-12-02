@@ -8,26 +8,17 @@ import (
 	"strings"
 )
 
-const (
-	NOT_ALLOWED_ERROR_MESSAGE = "You are not allowed to read this file unfortunately."
-)
-
-func exit() {
-	fmt.Fprintf(os.Stderr, NOT_ALLOWED_ERROR_MESSAGE)
-	os.Exit(2)
-}
-
-func Analyze() {
+func Analyze() (bool, error) {
 	input, err := io.ReadAll(os.Stdin)
 
 	// LogDebug(string(input))
 	if err != nil {
-		exit()
+		return false, err
 	}
 
 	var jsonMap map[string]any
 	if err := json.Unmarshal(input, &jsonMap); err != nil {
-		exit()
+		return false, err
 	}
 
 	toolInput, ok := jsonMap["tool_input"].(map[string]any)
@@ -36,9 +27,9 @@ func Analyze() {
 		filePathStr := fmt.Sprintf("%v", filePath)
 
 		if strings.Contains(filePathStr, ".env") {
-			exit()
+			return false, nil
 		}
 	}
 
-	os.Exit(0)
+	return true, nil
 }
