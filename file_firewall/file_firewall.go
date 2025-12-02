@@ -33,7 +33,7 @@ func Analyze() {
 	if ok {
 		filePath := toolInput["file_path"]
 		filePathStr := fmt.Sprintf("%v", filePath)
-		// TODO: proper parsing of the env file
+
 		if strings.Contains(filePathStr, ".env") {
 			exit()
 		}
