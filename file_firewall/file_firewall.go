@@ -20,6 +20,7 @@ func exit() {
 func Analyze() {
 	input, err := io.ReadAll(os.Stdin)
 
+	// LogDebug(string(input))
 	if err != nil {
 		exit()
 	}
