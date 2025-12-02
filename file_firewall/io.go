@@ -23,11 +23,13 @@ func Succeed() {
 func ReadPayload() (map[string]any, error) {
 	input, err := io.ReadAll(os.Stdin)
 
+	// TODO: flag for debug and add more debug statements
 	// LogDebug(string(input))
 	if err != nil {
 		return nil, err
 	}
 
+	// TODO: better type for jsonMap and maybe a unified struct or smt to be shared throghout the package
 	var jsonMap map[string]any
 	if err := json.Unmarshal(input, &jsonMap); err != nil {
 		return nil, err

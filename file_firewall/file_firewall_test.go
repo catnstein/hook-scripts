@@ -17,6 +17,7 @@ const READ_PAYLOAD = `{
     "tool_use_id": "REDACTED_TOOL_USE_ID"
   }`
 
+// TODO: test for read payload and grep payload
 func TestFileFirewall_FilePathContainsEnv(t *testing.T) {
 	// res, _ := AnalyzeContainsEnv(READ_PAYLOAD)
 

@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// TODO: implementation for Grep missing
 func AnalyzeContainsEnv(jsonMap map[string]any) (bool, error) {
 	toolInput, ok := jsonMap["tool_input"].(map[string]any)
 	if ok {
