@@ -33,3 +33,6 @@ go.work.sum
 
 # binary
 hook-binary
+
+# logs
+logs.txt
