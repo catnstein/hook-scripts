@@ -5,7 +5,12 @@ import (
 )
 
 func main() {
-	res, err := filefirewall.AnalyzeContainsEnv()
+	jsonMap, err := filefirewall.ReadPayload()
+	if err != nil {
+		filefirewall.Fail()
+	}
+
+	res, err := filefirewall.AnalyzeContainsEnv(jsonMap)
 
 	if err != nil {
 		filefirewall.Fail()
