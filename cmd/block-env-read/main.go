@@ -1,8 +1,6 @@
-package main
+package blockenvread
 
-import (
-	filefirewall "github.com/go/hook-scripts/file_firewall"
-)
+import "github.com/go/hook-scripts/internal/filefirewall"
 
 func main() {
 	jsonMap, err := filefirewall.ReadPayload()

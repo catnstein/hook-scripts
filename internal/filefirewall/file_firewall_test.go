@@ -20,5 +20,4 @@ const READ_PAYLOAD = `{
 // TODO: test for read payload and grep payload
 func TestFileFirewall_FilePathContainsEnv(t *testing.T) {
 	// res, _ := AnalyzeContainsEnv(READ_PAYLOAD)
-
 }
