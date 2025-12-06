@@ -1,4 +1,4 @@
-package blockenvread
+package main
 
 import "github.com/go/hook-scripts/internal/filefirewall"
 

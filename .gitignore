@@ -32,7 +32,7 @@ go.work.sum
 # .vscode/
 
 # binary
-hook-binary
+block-env-read
 
 # logs
 logs.txt
