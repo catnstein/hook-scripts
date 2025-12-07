@@ -7,7 +7,9 @@ import (
 
 // TODO: implementation for Grep missing
 func AnalyzeContainsEnv(jsonMap map[string]any) (bool, error) {
+	// TODO: better type
 	toolInput, ok := jsonMap["tool_input"].(map[string]any)
+
 	if ok {
 		filePath := toolInput["file_path"]
 		filePathStr := fmt.Sprintf("%v", filePath)
