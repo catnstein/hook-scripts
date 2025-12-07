@@ -5,3 +5,6 @@ build:
 
 install:
 	$(GO) install ./cmd/...
+
+test:
+	$(GO) test ./...
