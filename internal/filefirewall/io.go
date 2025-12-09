@@ -24,7 +24,7 @@ func ReadPayload() (map[string]any, error) {
 	input, err := io.ReadAll(os.Stdin)
 
 	// TODO: flag for debug and add more debug statements
-	LogDebug(string(input))
+	// LogDebug(string(input))
 	if err != nil {
 		return nil, err
 	}
