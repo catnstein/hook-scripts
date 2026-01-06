@@ -42,6 +42,10 @@ func ParsePayload() (*ReadPayload, error) {
 		return nil, err
 	}
 
+	return DeserialzeReadPayload(input)
+}
+
+func DeserialzeReadPayload(input []byte) (*ReadPayload, error) {
 	var jsonMap ReadPayload
 	if err := json.Unmarshal(input, &jsonMap); err != nil {
 		return nil, err
