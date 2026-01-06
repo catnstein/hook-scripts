@@ -3,7 +3,7 @@ package main
 import "github.com/go/hook-scripts/internal/filefirewall"
 
 func main() {
-	jsonMap, err := filefirewall.ReadPayload()
+	jsonMap, err := filefirewall.ParsePayload()
 	if err != nil {
 		filefirewall.Fail()
 	}

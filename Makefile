@@ -6,5 +6,8 @@ build:
 install:
 	$(GO) install ./cmd/...
 
+clean:
+	rm block-env-read
+
 test:
 	$(GO) test ./...

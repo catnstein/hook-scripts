@@ -20,20 +20,32 @@ func Succeed() {
 	os.Exit(0)
 }
 
-func ReadPayload() (map[string]any, error) {
+type ReadPayload struct {
+	SessionID      string `json:"session_id"`
+	TranscriptPath string `json:"transcript_path"`
+	Cwd            string `json:"cwd"`
+	PermissionMode string `json:"permission_mode"`
+	HookEventName  string `json:"hook_event_name"`
+	ToolName       string `json:"tool_name"`
+	ToolInput      struct {
+		FilePath string `json:"file_path"`
+	} `json:"tool_input"`
+	ToolUseID string `json:"tool_use_id"`
+}
+
+func ParsePayload() (*ReadPayload, error) {
 	input, err := io.ReadAll(os.Stdin)
 
 	// TODO: flag for debug and add more debug statements
-	// LogDebug(string(input))
+	LogDebug(string(input))
 	if err != nil {
 		return nil, err
 	}
 
-	// TODO: better type for jsonMap and maybe a unified struct or smt to be shared throghout the package
-	var jsonMap map[string]any
+	var jsonMap ReadPayload
 	if err := json.Unmarshal(input, &jsonMap); err != nil {
 		return nil, err
 	}
 
-	return jsonMap, nil
+	return &jsonMap, nil
 }

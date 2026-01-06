@@ -31,8 +31,5 @@ go.work.sum
 # .idea/
 # .vscode/
 
-# binary
-block-env-read
-
 # logs
 logs.txt
