@@ -17,7 +17,7 @@ Prevents tooling from reading the .env file
         "hooks": [
           {
             "type": "command",
-            "command": "block-env-read"
+            "command": "block-env"
           }
         ]
       }

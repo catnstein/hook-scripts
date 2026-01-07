@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "block-env-read"
+            "command": "block-env"
           }
         ]
       }

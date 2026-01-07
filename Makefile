@@ -7,7 +7,7 @@ install:
 	$(GO) install ./cmd/...
 
 clean:
-	rm block-env-read
+	rm block-env
 
 test:
 	$(GO) test ./...
