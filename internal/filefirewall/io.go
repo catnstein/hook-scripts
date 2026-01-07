@@ -29,6 +29,7 @@ type ReadPayload struct {
 	ToolName       string `json:"tool_name"`
 	ToolInput      struct {
 		FilePath string `json:"file_path"`
+		Path     string `json:"path"`
 	} `json:"tool_input"`
 	ToolUseID string `json:"tool_use_id"`
 }

@@ -8,7 +8,7 @@ import (
 const FILENAME = "logs.txt"
 
 func LogDebug(contents string) {
-	createFile()
+	// createFile()
 	f := openFile()
 	writeToFile(f, contents)
 	defer f.Close()

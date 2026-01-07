@@ -26,4 +26,14 @@ Prevents tooling from reading the .env file
 }
 ```
 
+### Test commands with Claude Code
+
+```sh
+# Grep
+claude "use the grep tool to tell me the value of MY_SECRET from the .env file" -p
+
+# Read
+claude "read .env file" -p
+```
+
 
