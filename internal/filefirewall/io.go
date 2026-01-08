@@ -37,8 +37,7 @@ type ReadPayload struct {
 func ParsePayload() (*ReadPayload, error) {
 	input, err := io.ReadAll(os.Stdin)
 
-	// TODO: flag for debug and add more debug statements
-	LogDebug(string(input))
+	Debug(string(input))
 	if err != nil {
 		return nil, err
 	}

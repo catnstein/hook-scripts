@@ -7,11 +7,15 @@ import (
 
 const FILENAME = "logs.txt"
 
-func LogDebug(contents string) {
-	// createFile()
-	f := openFile()
-	writeToFile(f, contents)
-	defer f.Close()
+var debugMode string = "false"
+
+func Debug(contents string) {
+	if debugMode == "true" {
+		// createFile()
+		f := openFile()
+		writeToFile(f, contents)
+		defer f.Close()
+	}
 }
 
 func createFile() {
