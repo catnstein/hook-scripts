@@ -32,5 +32,6 @@ func AnalyzeContainsEnv(jsonMap *ReadPayload) (bool, error) {
 	if jsonMap.ToolName == "Grep" {
 		return AnalyzeGrepContainsEnv(jsonMap)
 	}
+
 	return false, nil
 }
